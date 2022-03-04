@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title%}Boggle{% endblock %}
+{% block css %}'/static/board.css'{% endblock %}
+
+{% block content%}
+<section class="mt-3" id="boggle">
+    <table class="board">
+        <tbody>
+            {% for row in board%}
+            <tr>
+                {% for letter in row %}
+                <td>{{letter}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>High Score:
+        <b>{{ highscore }}</b>
+        in {{ nplays }} plays
+    </p>
+
+    <p>
+        Score: <b class="score">0</b>
+        Seconds Left: <b class="timer"></b>
+    </p>
+
+
+    <form method="POST" class="add-word">
+        <label class="form-label" for="guess">Make a Guess:</label>
+        <input class="form-control" type="text" id="guess" name="word">
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+    <p class="msg">
+
+    </p>
+
+    <ul class="words">
+
+    </ul>
+
+</section>
+
+{% endblock %}

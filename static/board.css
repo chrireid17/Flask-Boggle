@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+/* .col {
+    border: solid black 2px;
+    max-height: 50px;
+    max-width: 50px;
+    justify-content: center;
+    align-items: center;
+} */
+
+.board {
+    border: solid black 2px;
+    font-size: 200%;
+}
+
+td {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
